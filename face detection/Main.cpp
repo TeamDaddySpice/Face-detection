@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	cv::VideoCapture camera(0);
 	//cv::VideoCapture camera("D:\\video.mp4");
 	if (!camera.isOpened()) {
-		fprintf(stderr, "Error getting camera...\n");
+		fprintf(stderr, "Error getting camera..\n");
 		exit(1);
 	}
 
