@@ -38,10 +38,11 @@ int main(int argc, char** argv)
 		cv::rectangle(frame, detector.face(), cv::Scalar(255, 0, 0));
 		//cv::circle(frame, detector.facePosition(), 30, cv::Scalar(0, 255, 0)); //don't like central circle, i.e. redundant to rectangle
 
-		flip(frame, frame, 1); //fixes horizontally fliped webcam video
+		flip(frame	, frame, 1); //fixes horizontally fliped webcam video
 		cv::imshow(WINDOW_NAME, frame);
 
-		if (cv::waitKey(25) == 27) break;
+		if (cv::waitKey(30) >= 0) 
+			break;
 	}
 
 	return 0;

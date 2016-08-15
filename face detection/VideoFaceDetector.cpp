@@ -225,7 +225,7 @@ void VideoFaceDetector::detectFacesTemplateMatching(const cv::Mat &frame)
 
 	// Template matching with last known face 
 	//cv::matchTemplate(frame(m_faceRoi), m_faceTemplate, m_matchingResult, CV_TM_CCOEFF);
-	cv::matchTemplate(frame(m_faceRoi), m_faceTemplate, m_matchingResult, CV_TM_SQDIFF_NORMED);
+   	cv::matchTemplate(frame(m_faceRoi), m_faceTemplate, m_matchingResult, CV_TM_SQDIFF_NORMED);
 	cv::normalize(m_matchingResult, m_matchingResult, 0, 1, cv::NORM_MINMAX, -1, cv::Mat());
 	double min, max;
 	cv::Point minLoc, maxLoc;
